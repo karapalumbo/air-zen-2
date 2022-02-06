@@ -1,0 +1,18 @@
+.flight-card-container {
+  width: 100vh;
+}
+
+.flight-card-details {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.flight-date-and-status,
+.flight-to-and-from,
+.flight-departure-and-arrival,
+.flight-name-and-number {
+  display: flex;
+  justify-content: space-around;
+}
