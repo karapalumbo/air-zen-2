@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+
 .flight-card-container {
-  width: 100vh;
+  width: 450px;
 }
 
 .flight-card-details {
@@ -14,5 +16,24 @@
 .flight-departure-and-arrival,
 .flight-name-and-number {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.to-from,
+.departure-arrival {
+  margin-bottom: 0;
+  color: gray;
+}
+
+.departure-arrival {
+  margin-top: 0;
+}
+
+.to-from-iata {
+  margin-top: 0;
+}
+
+.departure-arrival-time {
+  font-weight: bold;
+  margin-top: 0;
 }

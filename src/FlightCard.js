@@ -22,15 +22,29 @@ const FlightCard = ({
       <div className="flight-card-details">
         <div className="flight-date-and-status">
           <div>{todaysDate.toLocaleDateString()}</div>
-          <div>{status}</div>
+          <div className="status"> {status}</div>
         </div>
         <div className="flight-to-and-from">
-          <div>From: {departureIata}</div>
-          <div>To: {arrivalIata}</div>
+          <div>
+            <p className="to-from">From</p>
+            <h2 className="to-from-iata"> {departureIata}</h2>
+          </div>
+          <div>
+            <p className="to-from">To</p>
+            <h2 className="to-from-iata">{arrivalIata}</h2>
+          </div>
         </div>
         <div className="flight-departure-and-arrival">
-          <div>Departure: {formatTime(departureTime)}</div>
-          <div>Arrival: {formatTime(arrivalTime)}</div>
+          <div>
+            <p className="departure-arrival">Departure</p>
+            <p className="departure-arrival-time">
+              {formatTime(departureTime)}
+            </p>
+          </div>
+          <div>
+            <p className="departure-arrival">Arrival</p>
+            <p className="departure-arrival-time">{formatTime(arrivalTime)}</p>
+          </div>
         </div>
         <div className="flight-name-and-number">
           <div>
