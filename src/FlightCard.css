@@ -7,14 +7,14 @@
 .flight-card-details {
   margin: 20px;
   padding: 20px;
-  border: 1px solid black;
+  box-shadow: 2px 2px 10px gray;
   border-radius: 10px;
 }
 
-.flight-date-and-status,
-.flight-to-and-from,
-.flight-departure-and-arrival,
-.flight-name-and-number {
+.flight-date-and-status-container,
+.flight-to-and-from-container,
+.flight-departure-and-arrival-container,
+.flight-name-and-number-container {
   display: flex;
   justify-content: space-between;
 }
@@ -23,6 +23,10 @@
 .departure-arrival {
   margin-bottom: 0;
   color: gray;
+}
+
+.flight-name-and-number {
+  margin-top: 18px;
 }
 
 .departure-arrival {
@@ -36,4 +40,22 @@
 .departure-arrival-time {
   font-weight: bold;
   margin-top: 0;
+}
+
+.status {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: lightseagreen;
+  margin-top: -5px;
+  color: white;
+  font-weight: bold;
+}
+
+.flight-details-btn {
+  border: 0;
+  background-color: white;
+  margin-top: 9px;
+  right: 20px;
+  cursor: pointer;
+  color: gray;
 }

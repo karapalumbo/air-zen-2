@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+
 import "./FlightCard.css";
 
 const FlightCard = ({
@@ -9,6 +13,12 @@ const FlightCard = ({
   name,
   number,
 }) => {
+  const [showFlightDetails, setShowFlightDetails] = useState(false);
+
+  const handleShowFlightDetails = () => {
+    setShowFlightDetails(!showFlightDetails);
+  };
+
   const todaysDate = new Date();
 
   const formatTime = (dateString) => {
@@ -20,11 +30,11 @@ const FlightCard = ({
   return (
     <div className="flight-card-container">
       <div className="flight-card-details">
-        <div className="flight-date-and-status">
+        <div className="flight-date-and-status-container">
           <div>{todaysDate.toLocaleDateString()}</div>
-          <div className="status"> {status}</div>
+          <div className="status"> {status.toUpperCase()}</div>
         </div>
-        <div className="flight-to-and-from">
+        <div className="flight-to-and-from-container">
           <div>
             <p className="to-from">From</p>
             <h2 className="to-from-iata"> {departureIata}</h2>
@@ -34,7 +44,7 @@ const FlightCard = ({
             <h2 className="to-from-iata">{arrivalIata}</h2>
           </div>
         </div>
-        <div className="flight-departure-and-arrival">
+        <div className="flight-departure-and-arrival-container">
           <div>
             <p className="departure-arrival">Departure</p>
             <p className="departure-arrival-time">
@@ -46,11 +56,19 @@ const FlightCard = ({
             <p className="departure-arrival-time">{formatTime(arrivalTime)}</p>
           </div>
         </div>
-        <div className="flight-name-and-number">
-          <div>
+        <div className="flight-name-and-number-container">
+          <div className="flight-name-and-number">
             {name} {number}
           </div>
-          <div>V</div>
+          <button
+            className="flight-details-btn"
+            onClick={handleShowFlightDetails}
+          >
+            <FontAwesomeIcon
+              size="2x"
+              icon={showFlightDetails ? faAngleUp : faAngleDown}
+            />
+          </button>
         </div>
       </div>
     </div>
