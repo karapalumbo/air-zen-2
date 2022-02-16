@@ -9,6 +9,7 @@ const ListOfFlights = () => {
 
   const getAllFlightInfo = async () => {
     const allFlightInfo = await getAllFlights();
+    console.log(allFlightInfo);
     setAllFlights(allFlightInfo.data);
   };
 
@@ -33,6 +34,12 @@ const ListOfFlights = () => {
               status={flight.flight_status}
               name={flight.airline.name}
               number={flight.flight.number}
+              arrivalTerminal={flight.arrival.terminal}
+              departureTerminal={flight.departure.terminal}
+              arrivalGate={flight.arrival.gate}
+              departureGate={flight.departure.gate}
+              arrivalDelay={flight.arrival.delay}
+              departureDelay={flight.departure.delay}
             />
           </div>
         );

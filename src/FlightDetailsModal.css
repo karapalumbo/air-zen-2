@@ -1,0 +1,23 @@
+.details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+.travel-time {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+p {
+  color: gray;
+  font-size: small;
+}
+
+.detail {
+  margin-bottom: 3px;
+}

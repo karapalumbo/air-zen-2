@@ -3,6 +3,7 @@ import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 import "./FlightCard.css";
+import FlightDetailsModal from "./FlightDetailsModal";
 
 const FlightCard = ({
   arrivalIata,
@@ -12,6 +13,12 @@ const FlightCard = ({
   status,
   name,
   number,
+  arrivalTerminal,
+  departureTerminal,
+  arrivalGate,
+  departureGate,
+  arrivalDelay,
+  departureDelay,
 }) => {
   const [showFlightDetails, setShowFlightDetails] = useState(false);
 
@@ -56,6 +63,7 @@ const FlightCard = ({
             <p className="departure-arrival-time">{formatTime(arrivalTime)}</p>
           </div>
         </div>
+
         <div className="flight-name-and-number-container">
           <div className="flight-name-and-number">
             {name} {number}
@@ -70,6 +78,24 @@ const FlightCard = ({
             />
           </button>
         </div>
+        {showFlightDetails && (
+          <>
+            <FlightDetailsModal
+              travelTime={"Departure"}
+              airport={departureIata}
+              terminal={departureTerminal}
+              gate={departureGate}
+              delay={departureDelay}
+            />
+            <FlightDetailsModal
+              travelTime={"Arrival"}
+              airport={arrivalIata}
+              terminal={arrivalTerminal}
+              gate={arrivalGate}
+              delay={arrivalDelay}
+            />
+          </>
+        )}
       </div>
     </div>
   );
