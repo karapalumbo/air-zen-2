@@ -13,11 +13,8 @@ h3 {
   margin-bottom: 0;
 }
 
-p {
-  color: gray;
-  font-size: small;
-}
-
 .detail {
   margin-bottom: 3px;
+  color: gray;
+  font-size: small;
 }

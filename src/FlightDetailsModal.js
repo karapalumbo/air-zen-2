@@ -2,6 +2,12 @@ import React from "react";
 import "./FlightDetailsModal.css";
 
 const FlightDetailsModal = ({ travelTime, airport, terminal, gate, delay }) => {
+  const timeConvert = (num) => {
+    const hours = Math.floor(num / 60);
+    const minutes = num % 60;
+    return hours + "h" + " " + minutes + "m";
+  };
+
   return (
     <div className="flight-details">
       <br />
@@ -10,19 +16,19 @@ const FlightDetailsModal = ({ travelTime, airport, terminal, gate, delay }) => {
       <div className="details-container">
         <div>
           <p className="detail">AIRPORT</p>
-          <div>{airport}</div>
+          <div>{airport == null ? "TBD" : airport}</div>
         </div>
         <div>
           <p className="detail">TERMINAL</p>
-          <div>{terminal}</div>
+          <div>{terminal == null ? "TBD" : terminal}</div>
         </div>
         <div>
           <p className="detail">GATE</p>
-          <div>{gate}</div>
+          <div>{gate == null ? "TBD" : gate}</div>
         </div>
         <div>
           <p className="detail">DELAY</p>
-          <div>{delay}</div>
+          <div>{delay == null ? "On time" : timeConvert(delay)}</div>
         </div>
       </div>
     </div>

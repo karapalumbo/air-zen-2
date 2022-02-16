@@ -25,16 +25,22 @@
   color: gray;
 }
 
+.to-from {
+  font-size: small;
+}
+
 .flight-name-and-number {
   margin-top: 18px;
 }
 
 .departure-arrival {
   margin-top: 0;
+  font-size: small;
 }
 
 .to-from-iata {
   margin-top: 0;
+  color: #267dc3;
 }
 
 .departure-arrival-time {
@@ -49,6 +55,7 @@
   margin-top: -5px;
   color: white;
   font-weight: bold;
+  font-size: small;
 }
 
 .flight-details-btn {

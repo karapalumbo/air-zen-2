@@ -9,7 +9,6 @@ const ListOfFlights = () => {
 
   const getAllFlightInfo = async () => {
     const allFlightInfo = await getAllFlights();
-    console.log(allFlightInfo);
     setAllFlights(allFlightInfo.data);
   };
 
