@@ -28,7 +28,9 @@ const FlightDetailsModal = ({ travelTime, airport, terminal, gate, delay }) => {
         </div>
         <div>
           <p className="detail">DELAY</p>
-          <div>{delay == null ? "On time" : timeConvert(delay)}</div>
+          <div className={delay ? "delayed" : undefined}>
+            {delay == null ? "On time" : timeConvert(delay)}
+          </div>
         </div>
       </div>
     </div>

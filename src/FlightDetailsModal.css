@@ -18,3 +18,7 @@ h3 {
   color: gray;
   font-size: small;
 }
+
+.delayed {
+  color: red;
+}
