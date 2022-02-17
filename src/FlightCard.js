@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import FlightDetailsModal from "./FlightDetailsModal";
+import AirplaneIcon from "./images/airplaneIcon.svg";
 
 import "./FlightCard.css";
 
@@ -47,6 +48,9 @@ const FlightCard = ({
           <div>
             <p className="to-from">From</p>
             <h2 className="to-from-iata"> {departureIata}</h2>
+          </div>
+          <div className="img-container">
+            <img className="airplane-icon-img" src={AirplaneIcon}></img>
           </div>
           <div>
             <p className="to-from">To</p>
