@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
 
-.logo {
-  display: block;
-  margin: 30px auto 30px;
-  width: 300px;
+.App {
+  margin-top: 80px;
 }
