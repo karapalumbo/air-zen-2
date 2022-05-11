@@ -28,7 +28,7 @@ const ListOfFlights = () => {
     const value = event.target.value.toLowerCase();
 
     if (value !== "") {
-      const filterByFlight = allFlights.filter((flight) => {
+      const filterByFlight = listOfAllFlights.filter((flight) => {
         const airlineName = flight?.airline?.name?.toLowerCase();
         return airlineName?.includes(value);
       });
@@ -36,6 +36,7 @@ const ListOfFlights = () => {
       setAllFlights(filterByFlight);
     } else {
       setFilteredFlights(listOfAllFlights);
+      event.target.value = "";
     }
   };
 
