@@ -50,7 +50,11 @@ const FlightCard = ({
             <h2 className="to-from-iata"> {departureIata}</h2>
           </div>
           <div className="img-container">
-            <img className="airplane-icon-img" src={AirplaneIcon}></img>
+            <img
+              className="airplane-icon-img"
+              src={AirplaneIcon}
+              alt="airplane-icon"
+            ></img>
           </div>
           <div>
             <p className="to-from">To</p>

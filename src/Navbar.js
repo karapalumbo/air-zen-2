@@ -4,7 +4,7 @@ import "./Navbar.css";
 export const Navbar = () => {
   return (
     <div className="navbar">
-      <img className="logo" src={AirzenLogo}></img>
+      <img className="logo" src={AirzenLogo} alt="airzen-logo"></img>
     </div>
   );
 };

@@ -1,12 +1,12 @@
 .navbar {
   background-color: lightcyan;
-  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
+  display: flex;
 }
 
 .logo {
   margin: 15px 15px;
-  width: 100px;
+  width: 120px;
 }
